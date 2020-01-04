@@ -51,7 +51,6 @@ class CategoryFragment : Fragment(), CategoryAdapter.ItemClickListener {
             categoryList = it
             adapter.setCategoryList(it)
         })
-
     }
 
     private fun initRecyclerView() {
@@ -62,7 +61,7 @@ class CategoryFragment : Fragment(), CategoryAdapter.ItemClickListener {
     }
 
     override fun onItemClick(position: Int) {
-        showToast(activity!!, "" + position)
+//        activity?.showToast("" + position)
         val bundle = bundleOf(EXTRA_QUERY to categoryList[position].categoryTitle)
 //        navController.navigate(R.id.action_categoryFragment_to_recipeFragment)
         view!!.findNavController().navigate(R.id.action_categoryFragment_to_recipeFragment, bundle)

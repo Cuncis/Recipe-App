@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName
 data class RecipeResponse(
 
     @field:SerializedName("recipes")
-	val recipes: List<Recipe?>? = null,
+	val recipes: List<Recipe>? = null,
 
     @field:SerializedName("count")
 	val count: Int? = null

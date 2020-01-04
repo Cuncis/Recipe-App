@@ -5,9 +5,15 @@
     android:layout_height="match_parent"
     tools:context=".ui.recipe.RecipeFragment">
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Recipe" />
+        android:id="@+id/rv_recipeList"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_gravity="center"/>
 
 </FrameLayout>

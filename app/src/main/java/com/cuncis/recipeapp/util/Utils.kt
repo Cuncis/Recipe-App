@@ -2,6 +2,7 @@ package com.cuncis.recipeapp.util
 
 import android.content.Context
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 
 class Utils {
@@ -14,8 +15,18 @@ class Utils {
             Log.d("_logRecipe", "\n" + message)
         }
 
-        fun showToast(context: Context, message: String) {
-            Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+        fun Context.showToast(message: String) {
+            Toast.makeText(applicationContext, message, Toast.LENGTH_SHORT).show()
+        }
+
+        fun View.showLoading() {
+            visibility = View.VISIBLE
+        }
+
+        fun View.hideLoading() {
+            visibility = View.GONE
         }
     }
+
+
 }
